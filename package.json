@@ -20,7 +20,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
-  "homepage": "./sarah-otley",
   "eslintConfig": {
     "extends": [
       "react-app",
