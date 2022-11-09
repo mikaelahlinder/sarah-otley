@@ -34,6 +34,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+    - uses: actions/upload-pages-artifact@v1
+      with:
+        name: build
+        path: './build'
   deploy:
     needs: build
     environment:
@@ -41,8 +45,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/download-artifact@master
+        with:
+          name: build
+          path: './build'
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
