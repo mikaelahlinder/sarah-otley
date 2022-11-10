@@ -8,7 +8,7 @@ const fadein = keyframes`
 `
 const Logo = styled.div`
   font-family: elza, sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 25px;
   text-align: center;
   margin-top: 50px;
@@ -55,6 +55,8 @@ const Portrait = styled.div`
   background-size: cover;
   background-position: top center;
   margin: 2rem auto;
+  animation: ${fadein} 2s;
+  animation-timing-function: ease;
   @media (max-width: 480px) {
     max-width: 1000px;
     font-size: 35px;
@@ -93,8 +95,10 @@ const Italic = styled.span`
 const Wrapper = styled.div`
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 5rem;
-
+  margin-bottom: 10rem;
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+  }
   a {
     color: #000;
     text-decoration: none;
@@ -110,16 +114,16 @@ const App: React.FC<{}> = () => {
       <Portrait />
       <Description>
         <div>
-          STOCKHOLM <Italic>based</Italic>.
+          STOCKHOLM <Italic>based.</Italic>
         </div>
         <div>
-          CREATIVE <Italic>leader</Italic>.
+          CREATIVE <Italic>leader.</Italic>
         </div>
         <div>
-          INTERIOR <Italic>architect</Italic>.
+          INTERIOR <Italic>architect.</Italic>
         </div>
         <div>
-          ARTIST & <Italic>illustrator</Italic>.
+          ARTIST & <Italic>illustrator.</Italic>
         </div>
       </Description>
       <Information>
