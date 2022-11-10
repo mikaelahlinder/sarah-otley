@@ -1,19 +1,31 @@
-import styled from "@emotion/styled"
-import React from "react"
 import { keyframes } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const fadein = keyframes`
   from { opacity: 0; }
   to   { opacity: 1; }
+`
+const Wrapper = styled.div`
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  animation: ${fadein} 1s;
+  animation-timing-function: ease;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+  }
 `
 const Logo = styled.div`
   font-family: elza, sans-serif;
   font-weight: 400;
   font-size: 25px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 100px;
-  -webkit-font-smoothing: antialiased;
   @media (max-width: 480px) {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -27,8 +39,6 @@ const HiThere = styled.h1`
   letter-spacing: -3.5px;
   font-size: 125px;
   line-height: 110px;
-  animation: ${fadein} 2s;
-  animation-timing-function: ease;
   @media (max-width: 480px) {
     font-size: 90px;
     line-height: 90px;
@@ -39,8 +49,6 @@ const KiaOra = styled.h3`
   font-family: elza, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  animation: ${fadein} 2s;
-  animation-timing-function: ease;
   @media (max-width: 480px) {
     padding: 0 2rem;
   }
@@ -55,8 +63,6 @@ const Portrait = styled.div`
   background-size: cover;
   background-position: top center;
   margin: 2rem auto;
-  animation: ${fadein} 2s;
-  animation-timing-function: ease;
   @media (max-width: 480px) {
     max-width: 1000px;
     font-size: 35px;
@@ -64,7 +70,7 @@ const Portrait = styled.div`
     max-height: 70vh;
   }
 `
-const Description = styled.div`
+const Words = styled.div`
   font-family: baskerville-poster-pt;
   font-weight: 400;
   font-size: 65px;
@@ -77,12 +83,9 @@ const Description = styled.div`
     letter-spacing: 0px;
   }
 `
-const Information = styled.div`
+const Contact = styled.div`
   font-family: baskerville-display-pt;
   font-size: 25px;
-  animation: ${fadein} 2s;
-  animation-timing-function: ease;
-  -webkit-font-smoothing: smooth;
   @media (max-width: 480px) {
     margin-top: 0rem;
     font-size: 18px;
@@ -92,67 +95,57 @@ const Information = styled.div`
 const Italic = styled.span`
   font-style: italic;
 `
-const Wrapper = styled.div`
-  max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 10rem;
-  @media (max-width: 480px) {
-    margin-bottom: 2rem;
-  }
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-`
 
-const App: React.FC<{}> = () => {
-  return (
-    <Wrapper>
-      <Logo>SARAH OTLEY</Logo>
-      <KiaOra>kia ora</KiaOra>
-      <HiThere>hi there!</HiThere>
-      <Portrait />
-      <Description>
-        <div>
-          STOCKHOLM <Italic>based.</Italic>
-        </div>
-        <div>
-          CREATIVE <Italic>leader.</Italic>
-        </div>
-        <div>
-          INTERIOR <Italic>architect.</Italic>
-        </div>
-        <div>
-          ARTIST & <Italic>illustrator.</Italic>
-        </div>
-      </Description>
-      <Information>
-        <div>
-          Currently: H&M Group Design Studio. Design Operations Manager.
-        </div>
-        <div style={{ marginTop: "20px" }}>sarah.otley@gmail.com</div>
-        <div>+46 (0)70 2739512</div>
-        <div>
-          <a
-            href="https://instagram.com/sarahotleystudio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            instagram
-          </a>
-        </div>
-        <div>
-          <a
-            href="https://www.linkedin.com/in/sarahotley"
-            target="_blank"
-            rel="noreferrer"
-          >
-            linkedin
-          </a>
-        </div>
-      </Information>
-    </Wrapper>
-  )
-}
+const App = () => (
+  <Wrapper>
+    <Logo>SARAH OTLEY</Logo>
+    <KiaOra>kia ora</KiaOra>
+    <HiThere>hi there!</HiThere>
+    <Portrait />
+    <Words>
+      <div>
+        STOCKHOLM <Italic>based.</Italic>
+      </div>
+      <div>
+        CREATIVE <Italic>leader.</Italic>
+      </div>
+      <div>
+        INTERIOR <Italic>architect.</Italic>
+      </div>
+      <div>
+        ARTIST & <Italic>illustrator.</Italic>
+      </div>
+    </Words>
+    <Contact>
+      <p>Currently: H&M Group Design Studio. Design Operations Manager.</p>
+      <div>
+        <a href="mailto:sarah.otley@gmail.com?subject=Hi there!">
+          sarah.otley@gmail.com
+        </a>
+      </div>
+      <div>
+        <a href="tel: +460702739512">+46 (0)70 2739512</a>
+      </div>
+      <div>
+        <a
+          href="https://instagram.com/sarahotleystudio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          instagram
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/sarahotley"
+          target="_blank"
+          rel="noreferrer"
+        >
+          linkedin
+        </a>
+      </div>
+    </Contact>
+  </Wrapper>
+)
 
 export default App
