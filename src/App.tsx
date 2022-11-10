@@ -37,8 +37,8 @@ const HiThere = styled.h1`
 `
 const KiaOra = styled.h3`
   font-family: elza, sans-serif;
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
   animation: ${fadein} 2s;
   animation-timing-function: ease;
   @media (max-width: 480px) {
