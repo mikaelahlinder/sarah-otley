@@ -13,7 +13,9 @@ const Wrapper = styled.div`
   animation-timing-function: ease;
   a {
     color: #000;
-    text-decoration: none;
+    &.nu {
+      text-decoration: none;
+    }
   }
   @media (max-width: 480px) {
     margin-bottom: 2rem;
@@ -107,6 +109,9 @@ const App = () => (
         STOCKHOLM <Italic>based.</Italic>
       </div>
       <div>
+        DESIGN <Italic>thinker.</Italic>
+      </div>
+      <div>
         CREATIVE <Italic>leader.</Italic>
       </div>
       <div>
@@ -119,12 +124,14 @@ const App = () => (
     <Contact>
       <p>Currently: H&M Group Design Studio. Design Operations Manager.</p>
       <div>
-        <a href="mailto:sarah.otley@gmail.com?subject=Hi there!">
+        <a className="nu" href="mailto:sarah.otley@gmail.com?subject=Hi there!">
           sarah.otley@gmail.com
         </a>
       </div>
       <div>
-        <a href="tel: +460702739512">+46 (0)70 2739512</a>
+        <a className="nu" href="tel: +460702739512">
+          +46 (0)70 2739512
+        </a>
       </div>
       <div>
         <a
