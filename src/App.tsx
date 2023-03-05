@@ -122,7 +122,6 @@ const App = () => (
       </div>
     </Words>
     <Contact>
-      <p>Currently: H&M Group Design Studio. Design Operations Manager.</p>
       <div>
         <a className="nu" href="mailto:sarah.otley@gmail.com?subject=Hi there!">
           sarah.otley@gmail.com
